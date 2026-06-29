@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Транслітерація українських імен</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<div style="background:#4ED17A" class="jumbotron text-center">
+    <h1 style="color:white">Транслітерація українських імен</h1>
+    <p style="color:white">Географічна транслітерація УКППТ 1996</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Введіть прізвище та ім'я українською:</h4>
+            <textarea class="form-control" rows="5" id="sourceText"></textarea>
+        </div>
+        <div class="col-sm-6">
+            <h4>Транслітерація англійською:</h4>
+            <textarea class="form-control" rows="5" id="resultText" readonly></textarea>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
