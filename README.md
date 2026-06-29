@@ -2,7 +2,7 @@
 
 Ukrainian-to-Latin transliteration tool for names and toponyms.
 
-Provides two transliteration standards and Adobe scripts for Illustrator and InDesign.
+Single HTML file — no dependencies, no server required. Also includes Adobe JSX scripts for Illustrator and InDesign.
 
 ---
 
@@ -17,24 +17,29 @@ Provides two transliteration standards and Adobe scripts for Illustrator and InD
 Converts Ukrainian text (names, surnames, toponyms) to Latin script using two standards:
 
 - **A3 / UKPPT 1996** — geographic transliteration with simplified rules (no apostrophes, no `iie`/`iia` duplications, `ьо` → `io`)
-- **KMU 2010** — official Ukrainian transliteration standard approved by Cabinet of Ministers resolution №55, 27 January 2010
+- **KMU 2010** — official standard approved by Cabinet of Ministers resolution №55, 27 January 2010
 
 ### Web App
 
-Open `index.html` in a browser — no server required.
+Open `index.html` in any browser — no installation, no server, no dependencies.
 
-Type Ukrainian text on the left, get the transliteration on the right in real time. Input is saved to `localStorage` between sessions.
+- Switch between A3 and KMU 2010 with the mode buttons at the top
+- Type Ukrainian text on the left — transliteration appears on the right in real time
+- **Copy** button copies the result to clipboard
+- **Clear** button resets the input
+- Character count shown below each field
+- Input is saved to `localStorage` between sessions
 
 ### Adobe Scripts
 
 JSX scripts for in-place transliteration directly inside Adobe applications:
 
-| Script | Application |
-|--------|-------------|
-| `scripts/A3 Translit (AI).jsx` | Adobe Illustrator |
-| `scripts/A3 Translit (ID).jsx` | Adobe InDesign |
-| `scripts/Translit KMU 2010 (AI).jsx` | Adobe Illustrator |
-| `scripts/Translit KMU 2010 (ID).jsx` | Adobe InDesign |
+| Script | Application | Standard |
+|--------|-------------|----------|
+| `scripts/A3 Translit (AI).jsx` | Adobe Illustrator | A3 / UKPPT 1996 |
+| `scripts/A3 Translit (ID).jsx` | Adobe InDesign | A3 / UKPPT 1996 |
+| `scripts/Translit KMU 2010 (AI).jsx` | Adobe Illustrator | KMU 2010 |
+| `scripts/Translit KMU 2010 (ID).jsx` | Adobe InDesign | KMU 2010 |
 
 Select text, run the script — works with point text, text frames, and text on a path.
 
@@ -50,12 +55,7 @@ Open `Window > Utilities > Scripts`, right-click the `User` folder → `Reveal i
 
 ```
 translitua/
-├── index.html             # Web app
-├── app.js                 # Transliteration logic (A3 standard)
-├── style.css
-├── bootstrap.min.css
-├── bootstrap.min.js
-├── jquery-3.2.1.min.js
+├── index.html        # Web app — all-in-one, no external dependencies
 └── scripts/
     ├── A3 Translit (AI).jsx          # Illustrator — A3 standard
     ├── A3 Translit (ID).jsx          # InDesign — A3 standard
@@ -76,24 +76,29 @@ JSX scripts based on [a3-tools](https://github.com/agentyzmin/a3-tools) by [Аг
 Інструмент для транслітерації українських імен та топонімів латиницею. Підтримує два стандарти:
 
 - **A3 / УКППТ 1996** — географічна транслітерація зі спрощеними правилами (без апострофів, без дублювань «iie»/«iia», «ьо» → «io»)
-- **КМУ 2010** — офіційна транслітерація українського алфавіту латиницею, затверджена [постановою](https://zakon.rada.gov.ua/laws/show/55-2010-%D0%BF) Кабінету Міністрів України №55 від 27 січня 2010 р.
+- **КМУ 2010** — офіційна транслітерація, затверджена [постановою](https://zakon.rada.gov.ua/laws/show/55-2010-%D0%BF) КМУ №55 від 27 січня 2010 р.
 
 ### Веб-застосунок
 
-Відкрийте `index.html` у браузері — сервер не потрібен.
+Відкрийте `index.html` у будь-якому браузері — без встановлення, без сервера, без залежностей.
 
-Введіть текст ліворуч — транслітерація з'являється праворуч у реальному часі. Введений текст зберігається у `localStorage` між сесіями.
+- Перемикання між A3 і КМУ 2010 кнопками зверху
+- Введіть текст ліворуч — транслітерація з'являється праворуч у реальному часі
+- Кнопка **«Копіювати»** — копіює результат у буфер обміну
+- Кнопка **«Очистити»** — скидає поле введення
+- Лічильник символів під кожним полем
+- Введений текст зберігається у `localStorage` між сесіями
 
 ### Скрипти для Adobe
 
 JSX-скрипти для транслітерації безпосередньо в Adobe-додатках:
 
-| Скрипт | Програма |
-|--------|----------|
-| `scripts/A3 Translit (AI).jsx` | Adobe Illustrator |
-| `scripts/A3 Translit (ID).jsx` | Adobe InDesign |
-| `scripts/Translit KMU 2010 (AI).jsx` | Adobe Illustrator |
-| `scripts/Translit KMU 2010 (ID).jsx` | Adobe InDesign |
+| Скрипт | Програма | Стандарт |
+|--------|----------|----------|
+| `scripts/A3 Translit (AI).jsx` | Adobe Illustrator | A3 / УКППТ 1996 |
+| `scripts/A3 Translit (ID).jsx` | Adobe InDesign | A3 / УКППТ 1996 |
+| `scripts/Translit KMU 2010 (AI).jsx` | Adobe Illustrator | КМУ 2010 |
+| `scripts/Translit KMU 2010 (ID).jsx` | Adobe InDesign | КМУ 2010 |
 
 Виберіть текст, запустіть скрипт. Працює з точковим текстом, текстовими фреймами, текстом на кривих.
 
